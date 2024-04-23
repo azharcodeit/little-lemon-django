@@ -1,7 +1,6 @@
-## Django
+## Restaurant booking system using Django
 
-This is an in progress fullstack Django application for a Little Lemon Restaurant.
-
+This is an in progress fullstack application for a Little Lemon Restaurant with booking system.
 
 **To develop locally:**
 
