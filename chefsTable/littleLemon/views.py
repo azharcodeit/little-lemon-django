@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from rest_framework import generics
 from django.http import HttpResponse
 from django.views import View
 from .models import MenuItem
@@ -27,3 +28,11 @@ class MyView(View):
     def post(self, request): 
         # <logic to process POST request>
         return HttpResponse('response to POST request')
+
+class MenuItemsView(generics.ListCreateAPIView):
+    queryset = MenuItem.objects.all()
+    serializer_class = MenuItemSerializer
+
+class SingleMenuItemView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = MenuItem.objects.all()
+    serializer_class = MenuItemSerializer
